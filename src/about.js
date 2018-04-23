@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Home from './home'
+// import Home from './home'
 import asyncComponent from './asyncComponent'
 
 class AboutPage extends React.Component {
@@ -13,7 +13,7 @@ class AboutPage extends React.Component {
   }
 
   showHome() {
-    // const Home = asyncComponent(() => import("./home").then(module => module.default),{ name: "Page 1" })
+    const Home = asyncComponent(() => import("./home").then(module => module.default),{ name: "Page 1" })
     this.HomeComponent = <Home />
     this.setState({ show: true })
   }
